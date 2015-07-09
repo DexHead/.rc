@@ -1,0 +1,28 @@
+[ui]
+
+username = Jan Geissler (u_2314) <technik@pyrexx.com>
+editor = vim
+merge=kdiff3
+
+[extensions]
+hgext.extdiff =
+graphlog =
+hgk =
+shelve =
+color=
+progress=
+
+[extdiff]
+cmd.kdiff3 =
+
+[merge-tools]
+kdiff3.args = $base $local $other -o $output
+
+
+[progress]
+delay = 1
+changedelay = 1
+refresh = 0.1
+width = 75
+
+
