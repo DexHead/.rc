@@ -124,6 +124,11 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ~='cd ~'
 
+alias cd-='cd -'
+alias c-='cd -'
+alias cd--='cd --'
+alias c--='cd --'
+
 
 # Pretty-print of some PATH variables:
 alias path='echo -e ${PATH//:/\\n}'
@@ -166,6 +171,7 @@ alias kk='ll'
 
 # open in VIM
 alias bashrc='sudo vi ~/.bashrc'	# edit .bashrc
+alias bshrc='sudo vi ~/.bashrc'	# edit .bashrc
 alias vimrc='sudo vi ~/.vim/.vimrc'	# edit .vimrc
 alias hgrc='sudo vi ~/.hgrc'		# edit .hgrc
 alias auto='gnome-session-properties'	# autostart programme add-del-edit
@@ -173,6 +179,9 @@ alias autostart='gnome-session-properties'	# autostart programme add-del-edit
 alias desktop='ccsm'	# compiz manager #  desktop
 
 
+# start wine programs
+alias fheidi='cd ~/Heidi_portable || wine start heidisql.exe'
+alias heidi='wine start heidisql.exe'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -203,4 +212,9 @@ bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
 
 # Path
+
+# Bash Completion >>sudo<<
+if [ "$PS1" ]; then
+complete -cf sudo
+fi
 
